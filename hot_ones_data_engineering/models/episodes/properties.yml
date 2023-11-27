@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: hot_ones_raw_data
+    database: postgres
+    schema: raw
+    tables:
+      - name: hot_ones_episodes
+
+
+
+
+
+
