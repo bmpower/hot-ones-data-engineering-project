@@ -6,6 +6,8 @@ sources:
     schema: raw
     tables:
       - name: hot_ones_episodes
+      - name: hot_ones_sauces
+      - name: hot_ones_seasons
 
 
 
