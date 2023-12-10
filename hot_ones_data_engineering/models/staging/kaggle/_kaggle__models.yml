@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: "stg_kaggle__episodes"
+    description: "Cast, clean and rename fields for hot ones episodes raw data."
+    columns:
+      - name: "original_release_date"
+        description: "The episode's release date."
+      - name: "season"
+        description: "The season number that the episode aired in. This is a foreign key to seasons."
+      - name: "episode_season"
+        description: "The episode's number within the season it aired in (ordered by original release date)."
+      - name: "episode_overall"
+        description: "The episode's number within the entire show series (ordered by original release date). This is a unique identifier for the episode."
+      - name: "guest_appearance_number"
+        description: "The number of times that the episode's guest has appeared on the show."
+      - name: "episode_title"
+        description: "The descriptive title of the episode."
+      - name: "guest"
+        description: "The name of the episode's guest(s)."
+      - name: "finished_wings"
+        description: "Whether or not the guest(s) finished their wings during the episode."
+  
+  - name: "stg_kaggle__sauces"
+    description: "Cast, clean and rename fields for hot ones sauces raw data."
+    columns:
+      - name: "sauce_number"
+        description: "The sauce number featured within a season (ordered by episode within season)."
+      - name: "season"
+        description: "The season that the sauce was featured in. This is a foreign key to episodes and seasons."
+      - name: "scoville"
+        description: "The scoville units (measure of spiciness) of the sauce."
+      - name: "sauce_name"
+        description: "The descriptive name of the sauce."
+
+  - name: "stg_kaggle__seasons"
+    description: "Cast, clean and rename fields for hot ones seasons raw data."
+    columns:
+      - name: "original_release_date"
+        description: "The release date of the season's first episode."
+      - name: "last_release_date"
+        description: "The release date of the season's final episode. Will show null for a season with no last release date."
+      - name: : "season_number"
+        description: "The number of the season (ordered by release). This is a unique identifier for the season."
+      - name: "num_episodes"
+        description: "The number of episodes that aired within the season. Will show null for a season with no last release date."
+      - name: "special_note"
+        description: "Any special notes or comments about the season. Will show null if there are no notes."
+
+
