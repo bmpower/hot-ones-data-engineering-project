@@ -25,7 +25,7 @@ models:
     description: "Cast, clean and rename fields for hot ones sauces raw data."
     columns:
       - name: "sauce_number"
-        description: "The sauce number featured within a season (ordered by episode within season)."
+        description: "The sauce number featured within a season (ordered by scoville value)."
       - name: "season"
         description: "The season that the sauce was featured in. This is a foreign key to episodes and seasons."
       - name: "scoville"
