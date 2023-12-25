@@ -40,7 +40,7 @@ models:
         description: "The release date of the season's first episode."
       - name: "last_release_date"
         description: "The release date of the season's final episode. Will show null for a season with no last release date."
-      - name: : "season_number"
+      - name: "season_number"
         description: "The number of the season (ordered by release). This is a unique identifier for the season."
       - name: "num_episodes"
         description: "The number of episodes that aired within the season. Will show null for a season with no last release date."
