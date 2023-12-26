@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: "stg_kaggle__episodes"
+  - name: "stg_kaggle__hot_ones_episodes"
     description: "Cast, clean and rename fields for hot ones episodes raw data."
     columns:
       - name: "original_release_date"
@@ -21,7 +21,7 @@ models:
       - name: "finished_wings"
         description: "Whether or not the guest(s) finished their wings during the episode."
   
-  - name: "stg_kaggle__sauces"
+  - name: "stg_kaggle__hot_ones_sauces"
     description: "Cast, clean and rename fields for hot ones sauces raw data."
     columns:
       - name: "sauce_number"
@@ -33,7 +33,7 @@ models:
       - name: "sauce_name"
         description: "The descriptive name of the sauce."
 
-  - name: "stg_kaggle__seasons"
+  - name: "stg_kaggle__hot_ones_seasons"
     description: "Cast, clean and rename fields for hot ones seasons raw data."
     columns:
       - name: "original_release_date"
