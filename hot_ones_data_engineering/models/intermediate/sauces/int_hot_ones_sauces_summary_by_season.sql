@@ -50,11 +50,11 @@ max_scoville_by_season as (
 sauces_summary_by_season as (
     
     select
-    sauce_count_by_season.season,
-    sauce_count_by_season.total_sauces,
-    avg_scoville_by_season.avg_scoville,
-    max_scoville_by_season.max_scoville,
-    max_scoville_by_season.max_scoville_sauce
+        sauce_count_by_season.season,
+        sauce_count_by_season.total_sauces,
+        avg_scoville_by_season.avg_scoville,
+        max_scoville_by_season.max_scoville,
+        max_scoville_by_season.max_scoville_sauce
 
     from sauce_count_by_season
 
