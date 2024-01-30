@@ -4,6 +4,17 @@ with sauces as (
 
 ),
 
+sauce_count_by_season as (
+
+    select
+        season,
+        cast(count(distinct sauce_name) as smallint) as total_sauces
+
+    from sauces
+
+    group by season
+),
+
 avg_scoville_by_season as (
 
     select 
@@ -34,14 +45,22 @@ max_scoville_by_season as (
 
         )
 
-    ) 
+    ),
 
-select
-    avg_scoville_by_season.season,
+sauces_summary_by_season as (
+    
+    select
+    sauce_count_by_season.season,
+    sauce_count_by_season.total_sauces,
     avg_scoville_by_season.avg_scoville,
     max_scoville_by_season.max_scoville,
     max_scoville_by_season.max_scoville_sauce
 
-from avg_scoville_by_season
+    from sauce_count_by_season
 
-left join max_scoville_by_season on avg_scoville_by_season.season = max_scoville_by_season.season
+    left join avg_scoville_by_season on sauce_count_by_season.season = avg_scoville_by_season.season
+    left join max_scoville_by_season on sauce_count_by_season.season = max_scoville_by_season.season
+
+)
+
+select * from sauces_summary_by_season
