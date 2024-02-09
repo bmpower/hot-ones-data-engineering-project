@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: "hot_ones_seasons_summary"
+    description: "An aggregate of episode information for each season."
+    columns:
+      - name: "season_number"
+        description: "The season number of the series."
+      - name: "original_release_date"
+        description: "The date that the season started airing on."
+      - name: "num_episodes"
+        description: "The total number of episodes aired during the season."
+      - name: "num_episodes_wings_finished"
+        description: "The number of episodes aired during the season where the guest successfully finished their wings."
+      - name: "num_episodes_wings_not_finished"
+        description: "The number of episodes aired during the season where the guest un-successfully finished their wings."
+      - name: "num_episodes_wings_not_finished"
+        description: "The number of episodes aired during the season where the guest un-successfully finished their wings."
+      - name: "finish_percent"
+        description: "The percentage of episodes during the season where the guest successfully finished their wings."
+      - name: "total_sauces"
+        description: "The total number of sauces that were featured in the season."
+      - name: "avg_scoville"
+        description: "The average scoville value of all sauces featured in the season."
+      - name: "max_scoville"
+        description: "The max (highest) scoville value of all sauces featured in the season."
+      - name: "avg_scoville_sauce"
+        description: "The name of the sauce with the max scoville value in the season."
+  
+
+
+

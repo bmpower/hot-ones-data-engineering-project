@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: "int_hot_ones_sauces_summary_by_season"
+    description: "An aggregate of sauce measures by season."
+    columns:
+      - name: "season"
+        description: "The season number of the series."
+      - name: "total_sauces"
+        description: "The total number of sauces that were featured in the season."
+      - name: "avg_scoville"
+        description: "The average scoville value of all sauces featured in the season."
+      - name: "max_scoville"
+        description: "The max (highest) scoville value of all sauces featured in the season."
+      - name: "avg_scoville_sauce"
+        description: "The name of the sauce with the max scoville value in the season."
+  
+
+
+

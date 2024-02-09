@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: "int_hot_ones_episodes_guest_appearance_count"
+    description: "Count the total number of appearances for each guest across all episodes."
+    columns:
+      - name: "guest"
+        description: "The guest that appeared on the show."
+      - name: "total_appearances"
+        description: "The total number of appearances the guest has made on the show across all seasons."
+  
+  - name: "int_hot_ones_episodes_wings_finished"
+    description: "Episodes where the guest successfully finished their wings."
+    columns:
+      - name: "season"
+        description: "The season number that the episode aired in."
+      - name: "episode_title"
+        description: "The description of the episode."
+      - name: "guest"
+        description: "The guest who appeared on the episode."
+      - name: "guest_appearance_number"
+        description: "How many times the guest had appeared on the show at the time of the episode."
+
+  - name: "int_hot_ones_episodes_wings_not_finished"
+    description: "Episodes where the guest un-successfully finished their wings."
+    columns:
+      - name: "season"
+        description: "The season number that the episode aired in."
+      - name: "episode_title"
+        description: "The description of the episode."
+      - name: "guest"
+        description: "The guest who appeared on the episode."
+      - name: "guest_appearance_number"
+        description: "How many times the guest had appeared on the show at the time of the episode."
+
+

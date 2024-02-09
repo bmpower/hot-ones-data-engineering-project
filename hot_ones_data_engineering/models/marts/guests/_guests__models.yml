@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: "hot_ones_guests_summary"
+    description: "An aggregate of guest appearances and their wing-finish record."
+    columns:
+      - name: "guest"
+        description: "The guest that appeared on the series."
+      - name: "total_appearances"
+        description: "The total number of appearances (episodes) the guest made on the series."
+      - name: "appearances_wings_finished"
+        description: "The total number of appearances the guest made where they successfully finished their wings."
+      - name: "appearances_wings_not_finished"
+        description: "The total number of appearances the guest made where they un-successfully finished their wings."
+      - name: "finish_percent"
+        description: "The percentage of appearances by the guest where they successfully finished their wings."
+  
+
+
+
